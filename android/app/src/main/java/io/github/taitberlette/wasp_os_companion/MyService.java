@@ -127,6 +127,10 @@ public class MyService extends IntentService {
                 foundDevice = true;
                 connectToWatch(address, name);
             }
+            else{
+                scanForWatch(); //xk0.1
+            }
+
         }
     };
 
