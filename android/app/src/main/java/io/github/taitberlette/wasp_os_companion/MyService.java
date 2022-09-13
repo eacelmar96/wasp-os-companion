@@ -979,11 +979,5 @@ public class MyService extends IntentService {
             }
         }
     }
-    
-    while(connectionState != 1){
-    Thread.sleep(15000);
-    scanForWatch(); //xk
-    }
-
 }
 
