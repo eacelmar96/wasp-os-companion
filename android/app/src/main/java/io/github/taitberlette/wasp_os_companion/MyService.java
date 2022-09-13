@@ -128,7 +128,7 @@ public class MyService extends IntentService {
                 connectToWatch(address, name);
             }
             else{
-                scanForWatch(); //xk0.1
+                //scanForWatch(); //xk0.1
             }
 
         }
@@ -385,7 +385,7 @@ public class MyService extends IntentService {
                 return;
 
             } else {
-                return;
+                scanForWatch(); //xk0.2
             }
         }
 
