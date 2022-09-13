@@ -209,7 +209,7 @@ public class MyService extends IntentService {
                 uartTX = null;
                 cccd = null;
                 
-                scanForWatch() //xk
+                scanForWatch(); //xk0.0
             }
         }
 
