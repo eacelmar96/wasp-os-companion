@@ -129,7 +129,8 @@ class Device {
 
   // sync the device
   static Future<void> sync() async {
-    // if (Device.device.connectState != 3 ||
+    if (Device.device.connectState == 0) Device.connect();
+    //    ||
     //     Device.device.syncing ||
     //     Device.device.updating) return;
 
