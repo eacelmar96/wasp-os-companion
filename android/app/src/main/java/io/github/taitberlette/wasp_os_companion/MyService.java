@@ -367,7 +367,7 @@ public class MyService extends IntentService {
             scanning = false;
             bleScanner.stopScan(leScanCallback);
             broadcastUpdate("io.github.taitberlette.wasp_os_companion.watchDisconnected");
-            scanForWatch(); //xk
+            //scanForWatch(); //xk
         }
     }
 
