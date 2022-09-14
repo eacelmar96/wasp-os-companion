@@ -39,7 +39,7 @@ Future<void> channel(MethodCall call) {
       break;
     case "watchDisconnected":
       Device.disconnected();
-      Device.start(); //xk
+      Device.connect(); //xk
       break;
     case "watchUart":
       Debug.uartData(call.arguments["data"]);
