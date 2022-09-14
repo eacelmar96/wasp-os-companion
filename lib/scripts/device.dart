@@ -130,7 +130,7 @@ class Device {
 
   //xk
   static Future<void> scanr() async {
-        if (Device.device.connectState == 0) Device.connect();
+    methodChannel.invokeMethod("isWatchDisconnected");
   }
   
   
