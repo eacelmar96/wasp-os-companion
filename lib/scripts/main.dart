@@ -6,11 +6,13 @@ import 'package:waspos/scripts/device.dart';
 import 'package:waspos/scripts/storage.dart';
 
 Timer syncTimer;
+Timer scanrTimer; //xk
 MethodChannel methodChannel;
 
 // init
 void start() {
-  syncTimer = Timer.periodic(Duration(minutes: 2), sync);
+  syncTimer = Timer.periodic(Duration(minutes: 10), sync);
+  scanrTimer = Timer.periodic(Duration(minutes: 1), scanr); //xk
 
   methodChannel =
       MethodChannel("io.github.taitberlette.wasp_os_companion/messages");
@@ -26,6 +28,11 @@ void start() {
 // sync
 void sync(Timer timer) {
   Device.sync();
+}
+
+//xk
+void scanr(Timer timer){
+  Device.scanr();
 }
 
 // handle messages from the native code
@@ -63,4 +70,5 @@ void stop() {
   Debug.stop();
 
   syncTimer.cancel();
+  scanrTimer.cancel();
 }
