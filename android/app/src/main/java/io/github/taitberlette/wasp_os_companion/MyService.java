@@ -113,6 +113,16 @@ public class MyService extends IntentService {
 
     public static boolean scanning = false;
     public static boolean foundDevice = false;
+    
+    //xk
+    public boolean isWatchDisconnected(){
+        if (BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress()))) == BluetoothProfile.STATE_DISCONNECTED){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
     private ScanCallback leScanCallback = new ScanCallback() {
         @Override
@@ -740,6 +750,11 @@ public class MyService extends IntentService {
                 case "io.github.taitberlette.wasp_os_companion.writeToBluetooth":
                     String data = intent.getStringExtra("io.github.taitberlette.wasp_os_companion.writeToBluetooth.data");
                     writeData(data);
+                    break;
+                case "io.github.taitberlette.wasp_os_companion.isWatchDisconnected":
+                    if (isWatchDisconnected()){
+                        broadcastUpdate("io.github.taitberlette.wasp_os_companion.watchDisconnected");
+                    }
                     break;
                 default:
                     break;
