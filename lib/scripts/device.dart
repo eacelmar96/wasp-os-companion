@@ -57,6 +57,7 @@ class Device {
 
     methodChannel.invokeMethod("connectToBluetooth");
   }
+  
 
   // called when the native code is connecting
   static connecting(String name) {
@@ -127,9 +128,15 @@ class Device {
     return response ?? SendResponse(null, null);
   }
 
+  //xk
+  static Future<void> scanr() async {
+        if (Device.device.connectState == 0) Device.connect();
+  }
+  
+  
   // sync the device
   static Future<void> sync() async {
-    if (Device.device.connectState == 0) Device.connect();
+    //if (Device.device.connectState == 0) Device.connect(); //xk
     //    ||
     //     Device.device.syncing ||
     //     Device.device.updating) return;
