@@ -729,7 +729,7 @@ public class MyService extends IntentService {
                 case "io.github.taitberlette.wasp_os_companion.connectToBluetooth":
                     if (connectionState != 0) {
                         broadcastUpdate("io.github.taitberlette.wasp_os_companion.watchConnected", bleGatt.getDevice().getName(), bleGatt.getDevice().getAddress());
-                        //backgroundSync(); xk
+                        backgroundSync();
                         break;
                     }
                     scanForWatch();
