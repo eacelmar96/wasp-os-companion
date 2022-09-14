@@ -1,5 +1,6 @@
 package io.github.taitberlette.wasp_os_companion;
 
+import org.apache.commons.collections4.CollectionUtils; //xk
 import android.Manifest;
 import android.app.IntentService;
 import android.bluetooth.le.BluetoothLeScanner;
@@ -69,6 +70,7 @@ public class MyService extends IntentService {
     private static BluetoothLeScanner bleScanner;
     private static String bleDeviceAddress;
     private static BluetoothGatt bleGatt;
+    //private static BluetoothProfile bleProfile; //xk
     public static int connectionState = 0;
 
     public final static UUID uartServiceUUID = UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e");
@@ -114,15 +116,6 @@ public class MyService extends IntentService {
     public static boolean scanning = false;
     public static boolean foundDevice = false;
     
-    //xk
-    //public boolean isWatchDisconnected(){
-    //    if(BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress())) == BluetoothProfile.STATE_DISCONNECTED){
-    //        return true;
-    //    }
-    //    else{
-    //        return false;
-    //    }
-    //}
 
     private ScanCallback leScanCallback = new ScanCallback() {
         @Override
@@ -355,7 +348,7 @@ public class MyService extends IntentService {
     
     //xk
     private boolean isWatchDisconnected(){
-        if(BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress())) == BluetoothProfile.STATE_DISCONNECTED){
+        if(CollectionUtils.isEmpty(bleManager.getConnectedDevices(BluetoothProfile.GATT))){
             return true;
         }
         else{
