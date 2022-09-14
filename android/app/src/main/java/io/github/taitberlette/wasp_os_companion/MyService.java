@@ -115,14 +115,14 @@ public class MyService extends IntentService {
     public static boolean foundDevice = false;
     
     //xk
-    public boolean isWatchDisconnected(){
-        if(BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress())) == BluetoothProfile.STATE_DISCONNECTED){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+    //public boolean isWatchDisconnected(){
+    //    if(BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress())) == BluetoothProfile.STATE_DISCONNECTED){
+    //        return true;
+    //    }
+    //    else{
+    //        return false;
+    //    }
+    //}
 
     private ScanCallback leScanCallback = new ScanCallback() {
         @Override
@@ -352,6 +352,16 @@ public class MyService extends IntentService {
             }
         }
     };
+    
+    //xk
+    private boolean isWatchDisconnected(){
+        if(BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress())) == BluetoothProfile.STATE_DISCONNECTED){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
     private void scanForWatch() {
         if (bleAdapter == null) {
