@@ -390,7 +390,7 @@ public class MyService extends IntentService {
             }
         }
         else{
-            scanForWatch();
+            scanForWatch(); //xk
         }
 
         final BluetoothDevice device = bleAdapter.getRemoteDevice(address);
@@ -412,6 +412,7 @@ public class MyService extends IntentService {
         }
         foundDevice = true;
         bleGatt.disconnect();
+        scanForWatch(); //xk
     }
 
     public void writeData(String data) {
