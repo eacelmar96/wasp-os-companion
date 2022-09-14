@@ -408,7 +408,7 @@ public class MyService extends IntentService {
 
     private void disconnectFromWatch() {
         if (bleAdapter == null || bleGatt == null) {
-            return;
+            scanForWatch(); //xk
         }
         foundDevice = true;
         bleGatt.disconnect();
