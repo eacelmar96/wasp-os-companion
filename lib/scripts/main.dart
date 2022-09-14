@@ -10,7 +10,7 @@ MethodChannel methodChannel;
 
 // init
 void start() {
-  syncTimer = Timer.periodic(Duration(minutes: 10), sync);
+  syncTimer = Timer.periodic(Duration(minutes: 2), sync);
 
   methodChannel =
       MethodChannel("io.github.taitberlette.wasp_os_companion/messages");
