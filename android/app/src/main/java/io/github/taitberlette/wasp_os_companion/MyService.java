@@ -116,7 +116,7 @@ public class MyService extends IntentService {
     
     //xk
     public boolean isWatchDisconnected(){
-        if (BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress()))) == BluetoothProfile.STATE_DISCONNECTED){
+        if(BluetoothProfile.getConnectionState(BluetoothAdapter.getRemoteDevice(bleGatt.getDevice().getAddress())) == BluetoothProfile.STATE_DISCONNECTED){
             return true;
         }
         else{
