@@ -1,6 +1,5 @@
 package io.github.taitberlette.wasp_os_companion;
 
-import org.apache.commons.collections4.CollectionUtils; //xk
 import android.Manifest;
 import android.app.IntentService;
 import android.bluetooth.le.BluetoothLeScanner;
@@ -348,7 +347,7 @@ public class MyService extends IntentService {
     
     //xk
     private boolean isWatchDisconnected(){
-        if(CollectionUtils.isEmpty(bleManager.getConnectedDevices(BluetoothProfile.GATT))){
+        if(bleManager.getConnectedDevices(BluetoothProfile.GATT).isEmpty()){
             return true;
         }
         else{
