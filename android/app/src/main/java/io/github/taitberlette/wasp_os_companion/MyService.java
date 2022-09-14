@@ -389,6 +389,9 @@ public class MyService extends IntentService {
                 scanForWatch(); //xk0.2
             }
         }
+        else{
+            scanForWatch();
+        }
 
         final BluetoothDevice device = bleAdapter.getRemoteDevice(address);
 
