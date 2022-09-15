@@ -5,8 +5,9 @@ import 'package:waspos/scripts/device.dart';
 // widget to view recent step data
 
 class StepsWidget extends StatefulWidget {
+  Key key;
   const StepsWidget({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
