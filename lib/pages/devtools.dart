@@ -13,8 +13,9 @@ import 'package:waspos/scripts/device.dart';
 // widget to view the uart console, upload files, and download files
 
 class Devtools extends StatefulWidget {
+  Key key;
   const Devtools({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
