@@ -9,7 +9,8 @@ import 'package:waspos/scripts/device.dart';
 // widget to edit an alarm on the watch
 
 class AlarmEdit extends StatefulWidget {
-  const AlarmEdit({Key key, this.alarmId = 0}) : super(key: key);
+  Key key;
+  const AlarmEdit({required this.key, this.alarmId = 0}) : super(key: key);
 
   final int alarmId;
 
