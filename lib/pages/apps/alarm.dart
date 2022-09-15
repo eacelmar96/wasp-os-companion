@@ -17,9 +17,10 @@ class AlarmWidget extends StatefulWidget {
   static int weekdays = monday | tuesday | wednesday | thursday | friday;
   static int weekends = saturday | sunday;
   static int every = weekdays | weekends;
-
+  
+  Key key;
   const AlarmWidget({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
