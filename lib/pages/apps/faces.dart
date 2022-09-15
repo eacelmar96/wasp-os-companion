@@ -4,8 +4,9 @@ import 'package:waspos/scripts/device.dart';
 // widget to change the watch face with previews
 
 class FacesWidget extends StatefulWidget {
+  Key key;
   const FacesWidget({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
