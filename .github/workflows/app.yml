@@ -52,7 +52,7 @@ jobs:
 
       # Build the APK file
       - name: Build APK
-        run: flutter build apk --verbose
+        run: flutter build apk
 
       # Upload the APK file
       - name: Upload APK
