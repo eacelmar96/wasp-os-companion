@@ -10,7 +10,7 @@ class AppLayout extends StatefulWidget {
       : super(key: key);
 
   final List<Widget> children;
-  final FloatingActionButton fab;
+  final FloatingActionButton? fab;
   final Function refresh;
 
   @override
