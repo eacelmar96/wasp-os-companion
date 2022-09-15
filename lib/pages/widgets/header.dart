@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 // wasp-os companion title widget
 
 class Header extends StatefulWidget {
+  Key key;
   const Header({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
