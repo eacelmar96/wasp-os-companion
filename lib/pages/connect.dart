@@ -8,8 +8,9 @@ import 'package:waspos/scripts/device.dart';
 // widget to connect to the watch
 
 class Connect extends StatefulWidget {
+  Key key;
   const Connect({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
