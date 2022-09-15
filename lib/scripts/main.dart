@@ -61,7 +61,7 @@ Future<void> channel(MethodCall call) {
       break;
   }
 
-  return null;
+  //return null;
 }
 
 // dispose
