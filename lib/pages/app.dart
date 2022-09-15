@@ -6,7 +6,7 @@ import 'package:workmanager/workmanager.dart';
 import 'connect.dart';
 
 void callbackDispatcher() {
-  Workmanager().executeTask((task, inputData) {return task;});
+  Workmanager().executeTask((task, inputData) {return true;});
 }
 
 // material app root
