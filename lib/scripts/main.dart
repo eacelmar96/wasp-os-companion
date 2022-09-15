@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:waspos/scripts/debug.dart';
 import 'package:waspos/scripts/device.dart';
 import 'package:waspos/scripts/storage.dart';
-import 'package:workmanager/workmanager.dart;
+import 'package:workmanager/workmanager.dart';
 
 Timer syncTimer;
 //Timer scanrTimer; //xk
