@@ -12,8 +12,9 @@ void callbackDispatcher() {
 // material app root
 
 class App extends StatefulWidget {
+  Key key;
   const App({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
