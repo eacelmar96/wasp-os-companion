@@ -6,17 +6,16 @@ import 'package:waspos/scripts/device.dart';
 import 'package:waspos/scripts/storage.dart';
 import 'package:workmanager/workmanager.dart';
 
-Timer syncTimer;
-//Timer scanrTimer; //xk
-MethodChannel methodChannel;
 
+//Timer scanrTimer; //xk
+
+Timer syncTimer = Timer.periodic(Duration(minutes: 10), sync);
 // init
 void start() {
-  syncTimer = Timer.periodic(Duration(minutes: 10), sync);
+ 
   //scanrTimer = Timer.periodic(Duration(minutes: 1), scanr); //xk
 
-  methodChannel =
-      MethodChannel("io.github.taitberlette.wasp_os_companion/messages");
+  MethodChannel methodChannel = MethodChannel("io.github.taitberlette.wasp_os_companion/messages");
 
   methodChannel.setMethodCallHandler(channel);
 
