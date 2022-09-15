@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:waspos/scripts/main.dart';
+import 'package:workmanager/workmanager.dart';
+
 
 import 'connect.dart';
+
+void callbackDispatcher() {
+  Workmanager().executeTask((task, inputData) {return task;});
+}
 
 // material app root
 
@@ -20,7 +26,9 @@ class _AppState extends State<App> {
   @override
   void initState() {
     super.initState();
-    start();
+    Workmanager().initialize(callbackDispatcher, isInDebugMode: true);
+    Workmanager().registerOneOffTask("io.github.taitberlette.wasp_os_companion.start", "io.github.taitberlette.wasp_os_companion.watchDisconnected");
+    //start();
   }
 
   // runs when the app is closed
