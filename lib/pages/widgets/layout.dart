@@ -5,7 +5,8 @@ import 'header.dart';
 // create a basic layout
 
 class AppLayout extends StatefulWidget {
-  const AppLayout({Key key, this.children, this.fab, this.refresh})
+  Key key;
+  const AppLayout({required this.key, required this.children, required this.fab, required this.refresh})
       : super(key: key);
 
   final List<Widget> children;
