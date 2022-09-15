@@ -8,7 +8,7 @@ import 'package:waspos/scripts/util.dart';
 // device interface class
 class Device {
   // the current device
-  static Device device;
+  static Device device = Device();
 
   // device stream
   static StreamController<Device> deviceStreamController =
@@ -192,7 +192,7 @@ class Device {
   }
 
   // get the path of an app on the watch
-  static String appPath(String appName, [int ring]) {
+  static String appPath(String appName, [int ring = 0]) {
     DeviceState state = Device.device.state;
 
     if (ring == null || ring == 0) {
@@ -215,7 +215,7 @@ class Device {
   }
 
   // check if an app is installed on the watch
-  static bool appInstalled(String appName, [int ring]) {
+  static bool appInstalled(String appName, [int ring = 0]) {
     return Device.appPath(appName, ring) != "";
   }
 
