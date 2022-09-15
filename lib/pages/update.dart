@@ -18,8 +18,9 @@ import 'package:waspos/scripts/util.dart';
 enum UpdateLocation { Release, Action, Local }
 
 class Update extends StatefulWidget {
+  Key key;
   const Update({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
