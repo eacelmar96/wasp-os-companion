@@ -5,8 +5,9 @@ import 'package:waspos/scripts/device.dart';
 // view device details
 
 class DeviceWidget extends StatefulWidget {
+  Key key;
   const DeviceWidget({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
