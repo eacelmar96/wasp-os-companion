@@ -4,15 +4,16 @@ import 'package:flutter/services.dart';
 import 'package:waspos/scripts/debug.dart';
 import 'package:waspos/scripts/device.dart';
 import 'package:waspos/scripts/storage.dart';
+import 'package:workmanager/workmanager.dart;
 
 Timer syncTimer;
-Timer scanrTimer; //xk
+//Timer scanrTimer; //xk
 MethodChannel methodChannel;
 
 // init
 void start() {
   syncTimer = Timer.periodic(Duration(minutes: 10), sync);
-  scanrTimer = Timer.periodic(Duration(minutes: 1), scanr); //xk
+  //scanrTimer = Timer.periodic(Duration(minutes: 1), scanr); //xk
 
   methodChannel =
       MethodChannel("io.github.taitberlette.wasp_os_companion/messages");
@@ -70,5 +71,5 @@ void stop() {
   Debug.stop();
 
   syncTimer.cancel();
-  scanrTimer.cancel();
+  //scanrTimer.cancel();
 }
