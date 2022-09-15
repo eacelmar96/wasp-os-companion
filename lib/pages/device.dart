@@ -10,8 +10,9 @@ import 'package:waspos/scripts/device.dart';
 // widget to update, view devtools, or reset the watch
 
 class DeviceOptions extends StatefulWidget {
+  Key key;
   const DeviceOptions({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
