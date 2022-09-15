@@ -5,8 +5,9 @@ import 'package:waspos/scripts/device.dart';
 // widget to modify the settings
 
 class SettingsWidget extends StatefulWidget {
+  Key key;
   const SettingsWidget({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
