@@ -258,13 +258,15 @@ class Device {
   // download a file from the filesystem
   static Future<List<int>> downloadFile(String filename) async {
     List<int> bytes = [];
+    List<int> nullio = [];
+
 
     Device.message('import os');
 
     SendResponse stats = await Device.message('os.stat("$filename")[6]');
 
     if (stats.text == null) {
-      return null;
+      return nullio;
     }
 
     int fileSize = int.parse(stats.text) ?? 0;
@@ -274,7 +276,7 @@ class Device {
     for (int i = 0; i < fileSize; i += 24) {
       SendResponse message = await Device.message('list(download.read(24))');
 
-      if (message.text == null) return null;
+      if (message.text == null) return nullio;
 
       List<int> currentBytes = jsonDecode(message.text).cast<int>();
 
