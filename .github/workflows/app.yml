@@ -31,6 +31,12 @@ jobs:
         uses: subosito/flutter-action@v1
         with:
           flutter-version: '3.3.2'
+      
+      - name: xk Upgrade Flutter
+        run: flutter upgrade
+        
+      - name: xk Clean Flutter
+        run: flutter clean
 
       # Update Flutter if needed
       - name: Upgrade Flutter
