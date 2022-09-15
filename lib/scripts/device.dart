@@ -108,7 +108,7 @@ class Device {
     command = command.trim();
 
     if (text.startsWith("Traceback") || text.startsWith("MemoryError"))
-      text = null;
+      text = "";
 
     messageStreamController.sink.add(SendResponse(text, command));
   }
