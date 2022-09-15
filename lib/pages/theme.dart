@@ -8,8 +8,9 @@ import 'package:waspos/scripts/device.dart';
 // widget to change the watch theme
 
 class ThemeSelect extends StatefulWidget {
+  Key key;
   const ThemeSelect({
-    Key key,
+    required this.key,
   }) : super(key: key);
 
   @override
