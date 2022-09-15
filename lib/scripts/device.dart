@@ -125,7 +125,7 @@ class Device {
     SendResponse response = await Device.messageStream
         .firstWhere((SendResponse element) => command == element.command);
 
-    return response ?? SendResponse(null, null);
+    return response ?? SendResponse("", "");
   }
 
   //xk
