@@ -9,8 +9,9 @@ import 'package:waspos/scripts/device.dart';
 // home screen widget
 
 class Home extends StatefulWidget {
-  const Home({
     Key key,
+  const Home({
+    required this.key,
   }) : super(key: key);
 
   @override
