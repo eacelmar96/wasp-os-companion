@@ -14,7 +14,7 @@ class FacesWidget extends StatefulWidget {
 }
 
 class _FacesWidgetState extends State<FacesWidget> {
-  PageController facesController;
+  PageController facesController = PageController();
 
   // all the faces on the watch
   Map<String, Map<String, String>> faces = {
