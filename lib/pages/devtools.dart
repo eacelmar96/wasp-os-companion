@@ -30,7 +30,7 @@ class _DevtoolsState extends State<Devtools> {
   ScrollController uartScrollController = ScrollController();
 
   // is a file currently being transferred
-  bool transferActive;
+  bool transferActive = false;
 
   @override
   void initState() {
