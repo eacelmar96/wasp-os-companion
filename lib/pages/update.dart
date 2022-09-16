@@ -183,7 +183,7 @@ class _UpdateState extends State<Update> {
           false;
 
       if (verify) {
-        startUpdate(File(result.files.single.path));
+        startUpdate(File(required result.files.single.path));
       }
     }
   }
