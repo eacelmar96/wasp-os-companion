@@ -28,7 +28,7 @@ class Update extends StatefulWidget {
 }
 
 class _UpdateState extends State<Update> {
-  StreamSubscription<Device> deviceSubscription;
+  StreamSubscription<Device> deviceSubscription = StreamSubscription();
 
   // arrays of recent updates
   List<Map<String, dynamic>> release = [];
@@ -39,7 +39,7 @@ class _UpdateState extends State<Update> {
 
   // details
   bool updateRunning = false;
-  double updateProgress;
+  double updateProgress = 0;
   bool failed = false;
 
   @override
