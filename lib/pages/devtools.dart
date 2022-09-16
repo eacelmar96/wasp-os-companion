@@ -23,8 +23,8 @@ class Devtools extends StatefulWidget {
 }
 
 class _DevtoolsState extends State<Devtools> {
-  StreamSubscription<Device> deviceSubscription;
-  StreamSubscription<String> uartSubscription;
+  StreamSubscription<Device> deviceSubscription = StreamSubscription();
+  StreamSubscription<String> uartSubscription = StreamSubscription();
 
   // modify the scroll location of the uart console
   ScrollController uartScrollController;
