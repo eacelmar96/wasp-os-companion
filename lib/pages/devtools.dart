@@ -72,7 +72,7 @@ class _DevtoolsState extends State<Devtools> {
       return;
     }
 
-    FilePickerResult result = await FilePicker.platform.pickFiles();
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
 
     if (result == null) {
       return;
