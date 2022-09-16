@@ -30,7 +30,7 @@ class WatchApp {
   }
 
   // custom logic to update the watch for each app
-  Future<void> update() {
+  Future<null> update() {
     return null;
   }
 }
