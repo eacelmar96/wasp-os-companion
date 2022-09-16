@@ -125,7 +125,7 @@ class _AlarmEditState extends State<AlarmEdit> {
               Text(options[i]),
               Checkbox(
                   value: ((alarm["state"] >> i) & 1) == 1 ? true : false,
-                  onChanged: (bool enabled) {
+                  onChanged: (bool? enabled) {
                     if (mounted) {
                       setState(() {
                         int num = enabled ? 1 : 0;
