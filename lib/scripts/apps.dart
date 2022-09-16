@@ -11,7 +11,7 @@ import 'apps/games.dart';
 class WatchApp {
   // details
   String name = "";
-  Widget widget;
+  Widget widget = Widget();
   bool showTitle = true;
 
   // is the app visible
