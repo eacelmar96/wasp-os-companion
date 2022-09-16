@@ -20,7 +20,7 @@ class DeviceOptions extends StatefulWidget {
 }
 
 class _DeviceOptionsState extends State<DeviceOptions> {
-  StreamSubscription<Device> deviceSubscription;
+  StreamSubscription<Device> deviceSubscription = StreamSubscription();
 
   // menu options
   List<Map<String, dynamic>> options = [];
