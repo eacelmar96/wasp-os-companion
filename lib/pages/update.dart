@@ -153,7 +153,7 @@ class _UpdateState extends State<Update> {
 
   // access an update from a file on the local system
   void localUpdate() async {
-    FilePickerResult result = await FilePicker.platform
+    FilePickerResult? result = await FilePicker.platform
         .pickFiles(type: FileType.custom, allowedExtensions: ["zip"]);
 
     if (result != null && result.files.single.extension == "zip") {
