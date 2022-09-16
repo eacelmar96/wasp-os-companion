@@ -235,7 +235,7 @@ class _UpdateState extends State<Update> {
         if (mounted) {
           setState(() {
             message = "Updating...";
-            updateProgress = percent / 100;
+            //updateProgress = percent / 100;
           });
         }
       }));
