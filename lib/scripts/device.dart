@@ -20,7 +20,7 @@ class Device {
       StreamController<SendResponse>.broadcast();
   static Stream<SendResponse> messageStream = messageStreamController.stream;
 
-  String name;
+  String name = "";
   String uuid;
   int connectState;
   bool syncing;
