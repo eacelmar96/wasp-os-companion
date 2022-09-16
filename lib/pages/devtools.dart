@@ -150,7 +150,7 @@ class _DevtoolsState extends State<Devtools> {
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
 
-    File file = File(result.files.single.path);
+    File file = File(required result.files.single.path);
 
     Uint8List bytes = await file.readAsBytes();
 
