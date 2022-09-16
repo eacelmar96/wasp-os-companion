@@ -19,7 +19,7 @@ class AlarmEdit extends StatefulWidget {
 }
 
 class _AlarmEditState extends State<AlarmEdit> {
-  StreamSubscription<Device> deviceSubscription;
+  StreamSubscription<Device> deviceSubscription = StreamSubscription();
 
   // options (in the same order as the bits used on the watch)
   List<String> options = [
