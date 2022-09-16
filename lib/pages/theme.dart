@@ -18,7 +18,7 @@ class ThemeSelect extends StatefulWidget {
 }
 
 class _ThemeSelectState extends State<ThemeSelect> {
-  StreamSubscription<Device> deviceSubscription;
+  StreamSubscription<Device> deviceSubscription = StreamSubscription();
 
   // default wasp-os theme
   List<int> wasp = [
