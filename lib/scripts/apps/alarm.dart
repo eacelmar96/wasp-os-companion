@@ -37,7 +37,7 @@ class AlarmApp extends WatchApp {
 
   @override
   Future<void> update() async {
-    Map<String, dynamic> alarmApp = Device.device.state.apps["Alarm"];
+    Map<String, dynamic>? alarmApp = Device.device.state.apps["Alarm"];
 
     Device.message(
         "${Device.appPath("AlarmApp")}.num_alarms = ${alarmApp["number"]}");
