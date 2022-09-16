@@ -72,7 +72,7 @@ class _AlarmEditState extends State<AlarmEdit> {
         ),
         InkWell(
           onTap: () async {
-            final TimeOfDay newTime = await showTimePicker(
+            final TimeOfDay? newTime = await showTimePicker(
               context: context,
               initialTime:
                   TimeOfDay(hour: alarm["hours"], minute: alarm["minutes"]),
