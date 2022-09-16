@@ -21,13 +21,13 @@ class Device {
   static Stream<SendResponse> messageStream = messageStreamController.stream;
 
   String name = "";
-  String uuid;
-  int connectState;
-  bool syncing;
-  bool updating;
-  bool askingNotifications;
-  DeviceState state;
-  DateTime syncTime;
+  String uuid = "";
+  int connectState = 0;
+  bool syncing = false;
+  bool updating = false;
+  bool askingNotifications = false;
+  DeviceState state = DeviceState();
+  DateTime syncTime = DateTime();
 
   Device() {
     name = "";
