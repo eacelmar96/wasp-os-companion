@@ -27,7 +27,7 @@ class _DevtoolsState extends State<Devtools> {
   StreamSubscription<String> uartSubscription = StreamSubscription();
 
   // modify the scroll location of the uart console
-  ScrollController uartScrollController;
+  ScrollController uartScrollController = ScrollController();
 
   // is a file currently being transferred
   bool transferActive;
