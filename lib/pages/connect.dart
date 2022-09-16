@@ -18,7 +18,7 @@ class Connect extends StatefulWidget {
 }
 
 class _ConnectState extends State<Connect> {
-  StreamSubscription<Device> deviceSubscription;
+  StreamSubscription<Device> deviceSubscription = StreamSubscription();
 
   // details
   String message = "Connect to your wasp-os device.";
