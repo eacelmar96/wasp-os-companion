@@ -71,7 +71,7 @@ class _AlarmWidgetState extends State<AlarmWidget> {
   List<Widget> getChildren() {
     List<Widget> children = [];
 
-    Map<String, dynamic> alarmApp = Device.device.state.apps["Alarm"];
+    Map<String, dynamic>? alarmApp = Device.device.state.apps["Alarm"];
 
     for (int i = 0; i < alarmApp["number"] ?? 0; i++) {
       Map<String, dynamic> item = alarmApp[i.toString()];
